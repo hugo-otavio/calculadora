@@ -3,37 +3,62 @@
     src: url('./../fonts/Oswald-Regular.ttf') format('truetype');
 }
 
-body{
-    font-family: 'Oswald', sans-serif;
-    background-color: #0D262D;
-    color:#ffffff
+:root{
+    --neutral1: #ffffff;
+    --neutral2: #f7f6df;
+    --neutral3: #e2e1c8;
+    --neutral4: #3e3e3e;
+    --primary: #F6F28A;
+    --secundary: #B489F5;
 }
 
-.edge{
-    display: flex;
-    justify-content: center;    
-    margin:0 auto;
+*{
+    box-sizing: border-box;
+    color: var(--neutral4)
+}
+
+body{   
+    font-family: 'Oswald', sans-serif; 
+}
+
+
+.calc-content{
+    width:70%;
+}
     
+.content{
+margin: 0px auto;
+max-width: 500px;
+}
 
+.wrap{
+    display:flex;               
+    width:100%;
+    margin-top:40px;
 }
-.container{
-    display:flex;    
-    Padding:40px 
+
+.border{
+    margin: 0px 0px 2px 2px;    
+    border-radius: 2px;
 }
-.align{    
-    width: 400px;    
-}
+
 .painel{
     display:flex;
-    align-items: center;    
-    padding: 10px 10px 10px 20px;
+    justify-content:space-around;
+    align-items: center;
+    background-color: var(--neutral2);
 }
-.painel, .key, .history-list{
-    margin: 0px 0px 10px 5px;
-    border: solid 1px #ffffff;
-    border-radius: 5px;
 
+.icon img{
+    width: 25px;
+    margin-left:20px;
+    transition: opacity 0.3s;
 }
+
+.icon img:hover{
+    opacity:0.5;
+}
+
 .display{        
     min-height: 80px;
     display: flex;
@@ -49,45 +74,42 @@ body{
     font-size: 40;
 }
 
-
-
 input{    
-    background-color: transparent;
-    border: none;
-    color:#ffffff;
+    background-color: inherit;
+    border: none;    
     text-align: right;
     width: 100%;    
 }
 
-
-.keys-lines{
-    display:flex;
+.keybox{
+    display:flex;    
 }
-
-.key-text {
-    display:flex;
-    justify-content: center;
-    margin:10px; 
-    font-size:30px;         
- }
-
 
 .key { 
-    width: 100%;
-    background-color: #b1820f;            
-    padding: 20px 0px;    
-}
-.key:hover{
-    background-color: #e2b22a;  
-}
-.key:active{
-    background-color: #bce2c8
+   background-color: var(--neutral3);            
+   width: 100%;   
+   padding: 20px;
+   transition: background-color 0.3s;    
 }
 
+.key:hover{
+    background-color:var(--primary);  
+}
+
+.key:active{
+    opacity: 0.5;
+}
+
+.key-text { 
+    text-align:center;
+    font-size:25px;         
+ } 
+
+
 .history-list {    
-    width: 180px;       
-    min-height:200px;
-    padding:10px
+    width: 30%; 
+    padding:10px;
+    background-color:var(--neutral2);    
 }
 
 #content{
@@ -98,16 +120,24 @@ input{
 .history-title {
     text-align: center;
     font-size: 18;
-    font-weight: 300;
-    
+    font-weight: 300;       
 }
 
-@media (max-width: 995px) {
-    .container{
-        display:block
+@media(max-width:560px){
+    .wrap{
+        margin:10px 0;
+        flex-direction: column;
+        height: 100vh;                     
     }
-    .history-list {    
-        width: auto;        
-        font-size:25px;   
+
+    .calc-content{        
+        width:100%;
+    }
+
+    .history-list{
+        margin-top:10px;
+        width:100%;   
+        height:100%;     
     }
 }
+

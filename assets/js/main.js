@@ -1,6 +1,6 @@
 const display = document.querySelector('[nome="display"]')
 const updisplay = document.querySelector('[nome="up-display"]')
-let termA = termB = operation = ''
+let [termA, termB, operation] = ['','','']
 let keyBlocker = false
 
 
@@ -91,11 +91,6 @@ const keyBoardCheck = e => {
         keyOperationEvent(typedKey)
     }
 }
-
-
-
-
-
 
 
 

@@ -3,104 +3,105 @@
 <head>
     <title>Calculadora</title>
     <meta charset="utf-8">
-    <link href="./assets/css/style.css" rel="stylesheet">    
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <meta name='viewport' content='width=device-width, initial-scale=1'/>
 </head>
 
 <body>
-    <div class="edge">
-        <div class="container">
-            <div class="align">
-                <div class="painel">
-                    <span>
+    <div class="content">
+        <div class="wrap">
+            <div class="calc-content">
+                <div class="painel border">
+                    <div class="icon">
                         <a href="#" onclick="reset()">
-                            <img src="./assets/imgs/marca-x.png" alt="Imagem Reset" width="30">
+                            <img src="./assets/imgs/cancel.png" alt="Imagem Reset">
                         </a>
-                    </span>
+                    </div>
                     <div class="display">
                         <div class="display-text1">
-                            <input type="text" nome="up-display" value="" disabled='true'></div>
+                            <input type="text" nome="up-display" value="" disabled='true'>
+                        </div>
                         <div class="display-text2">
                             <input type="text" nome="display" value="0" disabled='true'>
                         </div>
                     </div>
                 </div>
 
-                <div class="keys-lines">
-                    <div class="key" number>
+                <div class="keybox">
+                    <div class="key border" number>
                         <div class="key-text">7</div>
                     </div>
-                    <div class="key" number>
+                    <div class="key border" number>
                         <div class="key-text">8</div>
                     </div>
-                    <div class="key" number>
+                    <div class="key border" number>
                         <div class="key-text">9</div>
                     </div>
-                    <div class="key" operator>
+                    <div class="key border" operator>
                         <div class="key-text">/</div>
                     </div>
                 </div>
 
-                <div class="keys-lines">
-                    <div class="key" number>
+                <div class="keybox">
+                    <div class="key border" number>
                         <div class="key-text">4</div>
                     </div>
 
-                    <div class="key" number>
+                    <div class="key border" number>
                         <div class="key-text">5</div>
                     </div>
 
-                    <div class="key" number>
+                    <div class="key border" number>
                         <div class="key-text">6</div>
                     </div>
 
-                    <div class="key" operator>
+                    <div class="key border" operator>
                         <div class="key-text">x</div>
                     </div>
                 </div>
 
-                <div class="keys-lines">
-                    <div class="key" number>
+                <div class="keybox">
+                    <div class="key border" number>
                         <div class="key-text">1</div>
                     </div>
-                    <div class="key" number>
+                    <div class="key border" number>
                         <div class="key-text">2</div>
                     </div>
-                    <div class="key" number>
+                    <div class="key border" number>
                         <div class="key-text">3</div>
                     </div>
-                    <div class="key" operator>
+                    <div class="key border" operator>
                         <div class="key-text">-</div>
                     </div>
                 </div>
-                <div class="keys-lines">
-                    <div class="key" number>
+                <div class="keybox">
+                    <div class="key border" number>
                         <div class="key-text">0</div>
                     </div>
-                    <div class="key" number>
+                    <div class="key border" number>
                         <div class="key-text">.</div>
                     </div>
-                    <div class="key" result>
+                    <div class="key border" result>
                         <div class="key-text">=</div>
 
                     </div>
-                    <div class="key" operator>
+                    <div class="key border" operator>
                         <div class="key-text">+</div>
                     </div>
                 </div>
             </div>
 
-            <div class="history-list">
+            <div class="history-list border">
                 <div class="history-title">
                     <h2>Histórico</h2>
                 </div>
                 <content id="content"></content>
             </div>
         </div>
-
     </div>
 
     <script src="./assets/js/main.js"></script>
-    
+
 </body>
 
 </html>
