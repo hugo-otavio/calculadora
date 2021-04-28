@@ -1,5 +1,5 @@
 <h1 align="center">Calc-JS</h1>
-<p>Calculadora basica, com layout responsivo. Funcionalidades funcionalidades implementadas em Javascript.</p>
+<p>Calculadora basica, com layout responsivo. Funcionalidades implementadas em Javascript.</p>
 <h2>Layout Web</h2>
 <img src="./assets/imgs/github/20210427_195633.gif" width="400">
 <h2>Layout Mobile</h2>
